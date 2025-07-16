@@ -1,12 +1,153 @@
-# React + Vite
+# Mini ERP Lite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A *Mini Inventory Management System* built as part of the *AI & Full-Stack Trainee Technical Assessment*.
+This project demonstrates my ability to design, develop, deploy, and document a basic *ERP-like module* with scope to grow into AI workflows and ERPNext integration.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Project Objective
 
-## Expanding the ESLint configuration
+This app helps a small-scale retail business manage:
+- 📦 *Products:* Add, update, delete, track stock
+- 🏭 *Suppliers:* Add suppliers & associate products
+- 💰 *Transactions:* Record purchases & sales, auto-update stock
+- 📊 *Dashboard:* Get real-time stock alerts & inventory value
+- 📈 *Reports:* Low-stock items, total value, products by supplier
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ⚙ Tech Stack
+
+| Layer    | Technology                                |
+|----------|-------------------------------------------|
+| Frontend | *React.js* + *TailwindCSS* |
+| Backend  | *Node.js* + *Express.js* |
+| Database | *MongoDB Atlas (Cloud)* |
+| Hosting  | *Vercel* (Frontend) / *Render* (Backend)  |
+| Bonus    | *AI API (e.g., Together AI)* for reorder suggestions |
+
+---
+
+## 🚀 Live Demo
+
+👉 [View Live App Here](YOUR_LIVE_APP_LINK_HERE)
+
+---
+
+## 🎥 Walkthrough Video
+
+👉 [Watch the 3–5 min Screen Recording](YOUR_WALKTHROUGH_VIDEO_LINK_HERE)
+
+---
+
+## 📂 Folder Structure
+
+plaintext
+/mini-erp-lite
+ ├── /client        → React frontend (Vite + TailwindCSS)
+ ├── /server        → Node.js + Express backend (MongoDB)
+ └── README.md      → Project overview & instructions
+`
+
+## ✅ Key Features
+
+  - *Dashboard:* Product count, stock alerts, total inventory value.
+  - *Products Page:* Add, update, delete products.
+  - *Suppliers Page:* Add suppliers and link to products.
+  - *Transactions Page:* Record sales and purchases, auto-adjust stock.
+  - *Reports:* Low stock products, total inventory value, products by supplier.
+  - *(Bonus)* AI reorder quantity suggestions.
+
+-----
+
+## 🗂 Database Models
+
+  - *Product:* `name`, `SKU`, `price`, `quantity`, `supplier` (references Supplier, stored as String in current schema).
+  - *Supplier:* `name`, `contact`, `products` (array of Strings, likely product names/SKUs).
+  - *Transaction:* `product` (references Product ID), `supplier` (references Supplier ID, optional), `quantity`, `type` (`IN`/`OUT`), `date`.
+
+-----
+
+## ⚙ Setup Instructions
+
+1.  **Clone the Repository**
+
+    bash
+    git clone [https://github.com/YOUR-USERNAME/mini-erp-lite.git](https://github.com/YOUR-USERNAME/mini-erp-lite.git)
+    cd mini-erp-lite
+    
+
+2.  **Install Dependencies**
+
+    bash
+    # Frontend
+    cd client
+    npm install
+
+    # Backend
+    cd ../server
+    npm install
+    
+
+3.  **Environment Variables**
+
+    Create a `.env` file inside `/server`:
+
+    env
+    MONGO_URI=your_mongodb_connection_string
+    PORT=5000
+    AI_API_KEY=your_ai_api_key_if_applicable # e.g., for Together AI
+    
+
+    *Note: If your frontend makes direct API calls, you might need environment variables in your `/client` directory as well, depending on your frontend build tool (e.g., `VITE_APP_BACKEND_URL`).*
+
+4.  **Run Locally**
+
+    bash
+    # Start backend
+    cd server
+    npm run dev
+
+    # Start frontend
+    cd ../client
+    npm run dev
+    
+
+-----
+
+## ☁ Deployment
+
+  * *Frontend:* Deployed on *Vercel*
+  * *Backend:* Deployed on *Render* (or as *Vercel serverless functions* if integrated with Next.js API routes)
+  * *Database:* Hosted on *MongoDB Atlas (Cloud)*
+
+-----
+
+## 📚 ERPNext Readiness
+
+This app’s structure is designed to adapt into ERP systems like *ERPNext*:
+
+  * Replace the Node backend with *Frappe Framework* for ERPNext compatibility.
+  * Convert Mongo collections to *Doctypes*.
+  * Utilize ERPNext’s built-in inventory workflows, stock ledger, and user permissions.
+  * Extend functionalities by integrating with ERPNext modules for accounting, billing, or HR.
+
+-----
+
+## 💡 Bonus: AI Suggestion Feature
+
+Integrated with an *AI API (e.g., Together AI)* to:
+
+  * Analyze current stock levels and transaction history.
+  * Suggest optimal reorder quantities for products.
+  * Potentially forecast inventory trends for better planning.
+
+-----
+
+## 🙌 Author
+
+*Jayant Singh*
+Trainee Technical Assessment — AI & Full-Stack
+
+
+```
