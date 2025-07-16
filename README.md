@@ -79,75 +79,76 @@ plaintext
 
 2.  **Install Dependencies**
 
-    bash
+    ```bash
     # Frontend
     cd client
     npm install
+    ```
 
+    ```bash
     # Backend
     cd ../server
     npm install
-    
+    ```
 
 3.  **Environment Variables**
 
     Create a `.env` file inside `/server`:
 
-    env
+    ```env
     MONGO_URI=your_mongodb_connection_string
     PORT=5000
     AI_API_KEY=your_ai_api_key_if_applicable # e.g., for Together AI
-    
+    ```
 
     *Note: If your frontend makes direct API calls, you might need environment variables in your `/client` directory as well, depending on your frontend build tool (e.g., `VITE_APP_BACKEND_URL`).*
 
 4.  **Run Locally**
 
-    bash
+    ```bash
     # Start backend
     cd server
     npm run dev
+    ```
 
+    ```bash
     # Start frontend
     cd ../client
     npm run dev
-    
+    ```
 
------
+---
 
 ## ☁ Deployment
 
-  * *Frontend:* Deployed on *Vercel*
-  * *Backend:* Deployed on *Render* (or as *Vercel serverless functions* if integrated with Next.js API routes)
-  * *Database:* Hosted on *MongoDB Atlas (Cloud)*
+* *Frontend:* Deployed on *Vercel*
+* *Backend:* Deployed on *Render* (or as *Vercel serverless functions* if integrated with Next.js API routes)
+* *Database:* Hosted on *MongoDB Atlas (Cloud)*
 
------
+---
 
 ## 📚 ERPNext Readiness
 
 This app’s structure is designed to adapt into ERP systems like *ERPNext*:
 
-  * Replace the Node backend with *Frappe Framework* for ERPNext compatibility.
-  * Convert Mongo collections to *Doctypes*.
-  * Utilize ERPNext’s built-in inventory workflows, stock ledger, and user permissions.
-  * Extend functionalities by integrating with ERPNext modules for accounting, billing, or HR.
+* Replace the Node backend with *Frappe Framework* for ERPNext compatibility.
+* Convert Mongo collections to *Doctypes*.
+* Utilize ERPNext’s built-in inventory workflows, stock ledger, and user permissions.
+* Extend functionalities by integrating with ERPNext modules for accounting, billing, or HR.
 
------
+---
 
 ## 💡 Bonus: AI Suggestion Feature
 
 Integrated with an *AI API (e.g., Together AI)* to:
 
-  * Analyze current stock levels and transaction history.
-  * Suggest optimal reorder quantities for products.
-  * Potentially forecast inventory trends for better planning.
+* Analyze current stock levels and transaction history.
+* Suggest optimal reorder quantities for products.
+* Potentially forecast inventory trends for better planning.
 
------
+---
 
 ## 🙌 Author
 
-*Jayant Singh*
+*Jayant Singh Bisht*
 Trainee Technical Assessment — AI & Full-Stack
-
-
-```
