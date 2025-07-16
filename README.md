@@ -28,15 +28,9 @@ This app helps a small-scale retail business manage:
 
 ---
 
-## 🚀 Live Demo
-
-👉 [View Live App Here](YOUR_LIVE_APP_LINK_HERE)
-
----
-
 ## 🎥 Walkthrough Video
 
-👉 [Watch the 3–5 min Screen Recording](YOUR_WALKTHROUGH_VIDEO_LINK_HERE)
+👉 [Watch the 3–5 min Screen Recording]([(https://www.loom.com/share/a68656bee10f48fba5c5cde6ef6b9d11)])
 
 ---
 
